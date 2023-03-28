@@ -1,8 +1,7 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = $_POST["name"];
-  $phone = $_POST["phone"];
-  $message = $_POST["message"];
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+  $name = $_GET["name"];
+  $phone = $_GET["phone"];
+  $message = $_GET["message"];
 
   $to = "vladram3707@gmail.com";
   $subject = "Запрос с сайта";
@@ -14,4 +13,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<p>Ошибка отправки сообщения.</p>";
   }
 }
-?>
