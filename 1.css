@@ -1,0 +1,99 @@
+/* Убираем подчеркивание у ссылок */
+a {
+  text-decoration: none;
+}
+
+/* Изменяем цвет ссылок на синий */
+a {
+  color: black;
+}
+
+/* Увеличиваем размер шрифта ссылок */
+a {
+  font-size: 18px;
+}
+ul.submenu {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.orange-bar {
+  width: 100%;
+  height: 70px;
+  background-color: rgb(255, 165, 0); /* менее оранжевый цвет */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  margin: 30px auto;
+  background-color: white;
+  width: 80%; /* ширина квадрата 300px */
+  vertical-align: center;
+  height: 300px; /* высота квадрата 300px */}
+body {
+        margin: 0;
+        padding: 0;
+        background-color: #ccffcc; /* светло-светло зеленый */
+      }
+      header {
+        width: 100%;
+        height: 143px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      header img {
+        max-height: 100%;
+        max-width: 100%;
+      }
+      .orange-bar {
+        width: 100%;
+        height: 70px;
+        background-color: #bffcdb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .menu > li {
+        position: relative;
+        padding: 0 15px;
+      }
+      .submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        background-color: #f9f9f9;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .submenu > li {
+        padding: 12px 16px;
+      }
+      .menu > li:hover .submenu {
+        display: block;
+        animation: slide-down 0.5s;
+      }
+      @keyframes slide-down {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
